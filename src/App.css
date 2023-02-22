@@ -1,1 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+:root {
+  --primary: #3913b8;
+  --primaryDark: #8352fd;
+  --seconday: #2fb5fc;
+  --secondaryDark: #00cffd;
 
+  --darkPurple: #210b2c;
+  --eminence: #55286f;
+  --wisteria: #bc96e6;
+  --pinkLavander: #d8b4e2;
+  --skyMagneta: #ae759f;
+  --mainFont: 'ubuntu';
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--mainFont);
+}
