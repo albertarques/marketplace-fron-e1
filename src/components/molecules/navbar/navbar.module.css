@@ -1,16 +1,18 @@
 .navbarContainer {
     display: contents;
-    background-color: #ffffff;
+    background-color: blueviolet;
     width: 100%;
     box-sizing: border-box;
   }
   
-  .navbar {
+ .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     padding: 0.3rem;
   }
+
+
   
   
