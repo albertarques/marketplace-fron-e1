@@ -49,7 +49,7 @@ function CardsList() {
   } else {
     return (    
       <Container>
-        <h2>No data is available</h2>
+        <h2>Cargando...</h2>
       </Container>
     ) 
   }
