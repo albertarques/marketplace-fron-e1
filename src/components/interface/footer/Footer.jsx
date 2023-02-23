@@ -50,17 +50,8 @@ function ResponsiveAppBar() {
     <AppBar position="static" sx={{ bgcolor: '#210b2c' }}>
   <Container maxWidth="xl">
     <Toolbar disableGutters>
-      <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
-          onClick={handleOpenNavMenu}
-          color="inherit"
-        >
-          <MenuIcon />
-        </IconButton>
+      <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", alignItems: "center", md: 'none' }}>
+
         <Menu
           id="menu-appbar"
           anchorEl={anchorElNav}
@@ -87,6 +78,7 @@ function ResponsiveAppBar() {
           ))}
         </Menu>
       </Box>
+
       <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
         {pages.map((page) => (
