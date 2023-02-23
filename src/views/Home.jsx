@@ -13,18 +13,16 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import { Container } from "@mui/system";
 
-import { JobsContext } from "../context/JobsContext";
-
+import data from '../data/products.json'
 
 function Home() {
-  const { jobs } = useContext(JobsContext);
 
   return (
     <>
       <Navbar />
       <Container fixed>
         <Grid container spacing={2}>
-          {jobs.products.map((product) => (
+          {data.products.map((product) => (
             <Card key={product.key} sx={{ maxWidth: 345 }}>
               <CardMedia
                 sx={{ height: 140 }}
