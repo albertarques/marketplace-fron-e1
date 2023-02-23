@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import Navbar from '../components/interface/navbar/Navbar'
 import Footer from '../components/interface/footer/Footer'
@@ -12,17 +12,26 @@ import Grid from "@mui/material/Grid";
 
 import Card from "@mui/material/Card";
 import { Container } from "@mui/system";
-
-import data from '../data/products.json'
+import jobsService from '../apiService/jobsService'
 
 function Home() {
+
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    jobsService.getAll().then((res) => {
+      setData(res);
+    });
+  }, []);
 
   return (
     <>
       <Navbar />
       <Container fixed>
         <Grid container spacing={2}>
-          {data.products.map((product) => (
+          {console.log(data.jobs)}
+          {/* {data.jobs.map((product) => (
             <Card key={product.key} sx={{ maxWidth: 345 }}>
               <CardMedia
                 sx={{ height: 140 }}
@@ -42,7 +51,7 @@ function Home() {
                 <Button size="small">Learn More</Button>
               </CardActions>
             </Card>
-          ))}
+          ))} */}
         </Grid>
       </Container>
       <Footer />
