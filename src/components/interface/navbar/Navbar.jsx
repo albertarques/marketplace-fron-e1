@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import FaceIcon from '@mui/icons-material/Face';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -44,7 +45,8 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
         {/* no consigo que el logo se quede chiquito socorro
         <img src={logo} alt="Visual Side" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, width:'150px' }} /> */}
-          <Typography
+         <img src={logo} alt="Visual Side" style={{ transform: 'scale(0.18)' }} />
+           <Typography
             variant="h6"
             noWrap
             component="a"
@@ -131,7 +133,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Face alt="Remy Sharp" src="FaceIcon" />
+                <Face alt="Remy Sharp" src="PermIdentityIcon" />
               </IconButton>
             </Tooltip>
             <Menu
