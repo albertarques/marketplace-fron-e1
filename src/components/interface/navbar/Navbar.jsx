@@ -39,10 +39,11 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static sx={{ background: '#210b2c' }}>">
+    <AppBar position="static" sx={{ bgcolor: '#210b2c' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src={logo} alt="Visual Side" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, width:'40%' }} />
+        {/* no consigo que el logo se quede chiquito socorro
+        <img src={logo} alt="Visual Side" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, width:'150px' }} /> */}
           <Typography
             variant="h6"
             noWrap
