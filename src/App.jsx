@@ -2,10 +2,13 @@ import React from "react";
 import "./App.css";
 
 import PublicRoutes from "./router/PublicRoutes";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (
-        <PublicRoutes/>
+    <DataProvider>
+      <PublicRoutes/>
+    </DataProvider>
   );
 }
 
