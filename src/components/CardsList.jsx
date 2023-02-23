@@ -19,10 +19,10 @@ function CardsList() {
   if(data){
     return (
         <Container fixed>
-          <Grid container spacing={2}>
+          <Grid spacing={2}>
             {console.log(data.jobs)}
             {data.jobs.map((job) => (
-              <Card grid key={job.id} sx={{ maxWidth: 345 }}>
+              <Card key={job.id} sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
                   image="https://picsum.photos/200/300"
