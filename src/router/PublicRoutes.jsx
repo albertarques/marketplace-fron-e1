@@ -9,7 +9,7 @@ function PublicRoutes() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/detail" element={<Detail />}></Route>
+          <Route exact path="/jobs/:id" element={<Detail />}></Route>
         </Routes>
       </Router>
 );
