@@ -8,13 +8,17 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
+import FaceIcon from '@mui/icons-material/Face';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import logo from '../../../assets/img/logo.png';
+import { Face } from '@mui/icons-material';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Crear anuncio', 'Favoritos'];
+const settings = ['Perfil', 'Cuenta', 'Logout'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,11 +40,13 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: '#210b2c' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
+        {/* no consigo que el logo se quede chiquito socorro
+        <img src={logo} alt="Visual Side" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, width:'150px' }} /> */}
+         <img src={logo} alt="Visual Side" style={{ transform: 'scale(0.18)' }} />
+           <Typography
             variant="h6"
             noWrap
             component="a"
@@ -55,7 +61,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            VISUAL SIDE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -93,7 +99,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+         
           <Typography
             variant="h5"
             noWrap
@@ -110,7 +116,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            VISUAL SIDE
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -127,7 +133,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Face alt="Remy Sharp" src="PermIdentityIcon" />
               </IconButton>
             </Tooltip>
             <Menu
