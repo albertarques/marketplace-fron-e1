@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/molecules/navbar/Navbar';
+import SearchBar from './components/molecules/search/Search';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <SearchBar/>
     </div>
   );
 }
