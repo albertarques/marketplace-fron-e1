@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
 import Card from "@mui/material/Card";
+import Box from "@mui/material/Card";
 import { Container } from "@mui/system";
 
 import data from '../data/products.json'
@@ -20,12 +21,14 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Container fixed>
+      <Box sx={{ margin:4, display: "flex", justifyContent: "center", alignItems: "center"}}>
+
         <Grid container spacing={2}>
           {data.products.map((product) => (
-            <Card key={product.key} sx={{ maxWidth: 345 }}>
+
+            <Card key={product.key} sx={{ maxWidth: 345, margin:2 }}>
               <CardMedia
-                sx={{ height: 140 }}
+                sx={{ width:300, height: 140, margin:2 }}
                 image={product.thumbnail}
                 title={product.title}
               />
@@ -38,13 +41,12 @@ function Home() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Ver detalle</Button>
               </CardActions>
             </Card>
           ))}
         </Grid>
-      </Container>
+        </Box>
       <Footer />
     </>
   )
