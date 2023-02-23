@@ -1,12 +1,15 @@
 .footer {
-    background-color: #222;
     color: #fff;
     padding: 2% 0;
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--primary);
+    background-color: #210b2c;;
   }
   
   .icons {
