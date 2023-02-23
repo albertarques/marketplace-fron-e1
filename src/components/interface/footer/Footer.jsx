@@ -3,6 +3,7 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { RiInstagramFill } from 'react-icons/ri';
 import { BsGithub } from 'react-icons/bs';
+import LogowithLetters from "../../../assets/img/logoWithLetters";
 
 function Footer() {
   return (
@@ -15,7 +16,7 @@ function Footer() {
         
       </div>
       <div className="logo">
-        <img src="" alt="" />
+        <img src={LogowithLetters} alt="Logo" />
       </div>
     </footer>
   );
