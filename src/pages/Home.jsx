@@ -26,8 +26,8 @@ function Home() {
             <Card key={product.key} sx={{ maxWidth: 345 }}>
               <CardMedia
                 sx={{ height: 140 }}
-                image={product.key}
-                title="green iguana"
+                image={product.thumbnail}
+                title={product.title}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
