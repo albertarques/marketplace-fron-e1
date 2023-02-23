@@ -2,7 +2,7 @@ import React from "react";
 
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "../views/Home";
-import Detail from "../pages/Detail";
+import Detail from "../views/Detail";
 
 function PublicRoutes() {
   return (
