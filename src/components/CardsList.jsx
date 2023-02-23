@@ -10,6 +10,7 @@ import Card from "@mui/material/Card";
 import { Container } from "@mui/system";
 
 import {DataContext} from '../context/DataContext'
+import { Link } from 'react-router-dom';
 
 function CardsList() {
 
@@ -20,24 +21,25 @@ function CardsList() {
         <Container fixed>
           <Grid container spacing={2}>
             {console.log(data.jobs)}
-            {data.jobs.map((product) => (
-              <Card grid key={product.id} sx={{ maxWidth: 345 }}>
+            {data.jobs.map((job) => (
+              <Card grid key={job.id} sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={product.thumbnail}
-                  title={product.title}
+                  image={job.thumbnail}
+                  title={job.title}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    {product.title}
+                    {job.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {product.description}
+                    {job.description}
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
+                  <Link to={`/jobs/${job.id}`}>
+                    <Button size="small">Ver detalle</Button>
+                  </Link>
                 </CardActions>
               </Card>
             ))}
