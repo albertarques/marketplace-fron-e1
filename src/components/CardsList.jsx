@@ -25,7 +25,7 @@ function CardsList() {
               <Card grid key={job.id} sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={job.thumbnail}
+                  image="https://picsum.photos/200/300"
                   title={job.title}
                 />
                 <CardContent>
@@ -37,7 +37,7 @@ function CardsList() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Link to={`/jobs/${job.id}`}>
+                  <Link to={`/job/${job.id}`}>
                     <Button size="small">Ver detalle</Button>
                   </Link>
                 </CardActions>
