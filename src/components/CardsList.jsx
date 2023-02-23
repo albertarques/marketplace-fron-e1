@@ -45,7 +45,11 @@ function CardsList() {
         </Container>
     )
   } else {
-    return <h2>No data is available</h2>
+    return (    
+      <Container>
+        <h2>No data is available</h2>
+      </Container>
+    ) 
   }
 }
 
