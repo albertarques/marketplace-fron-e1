@@ -4,18 +4,19 @@
   justify-content: space-around;
   padding: 20px;
   /* background-color: rgba(71, 34, 71, 0.92); */
-  background-color: var(--primary);
 }
+
 .navbarLogo {
   display: flex;
-
   flex-direction: row;
   gap: 20px;
 }
+
 .navbarLogo h1 {
   font-size: 45px;
   gap: 30px;
   color: white;
+  
 }
 .img {
   width: 70px;
@@ -49,6 +50,7 @@
   width: 30em;
   height: 2.5em;
   border-radius: 15px;
+  
 }
 .inputSearch {
   margin-left: 37px;
