@@ -19,8 +19,9 @@ function CardsList() {
     return (
         <Container fixed>
           <Grid container spacing={2}>
+            {console.log(data.jobs)}
             {data.jobs.map((product) => (
-              <Card grid key={product.key} sx={{ maxWidth: 345 }}>
+              <Card grid key={product.id} sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
                   image={product.thumbnail}
