@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import "./search.module.css"
+import style from "./search.module.css"
 // import {AiOutlineSearch} from 'react-icons/ai'
 
 const Search = () => {
@@ -24,7 +24,7 @@ const Search = () => {
     };
   
     return (
-      <div className="search-container">
+      <div className={style.searchContainer}>
         <form>
           <input
             type="text"

@@ -1,4 +1,4 @@
-.search-container {
+.searchContainer {
     display: flex;
    justify-content: center;
    margin-top: 1rem;
@@ -8,7 +8,7 @@
   }
   
   /* Estilos para el input de búsqueda */
-  .search-container input[type="text"] {
+  .searchContainer input[type="text"] {
     padding: 10px;
     border: none;
     border-radius: 50px;
