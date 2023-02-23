@@ -3,20 +3,23 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
 import { RiInstagramFill } from 'react-icons/ri';
 import { BsGithub } from 'react-icons/bs';
-import LogowithLetters from "../../../assets/img/logoWithLetters";
+import Logo from '../../../assets/img/logo.png';
+import style from '../footer/footer.module.css';
+
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="icons">
+    <footer className={style.footer}>
+      <div className={style.icons}>
       <BsFacebook/>
       <BsLinkedin/>
       <RiInstagramFill/>
       <BsGithub/>
         
       </div>
-      <div className="logo">
-        <img src={LogowithLetters} alt="Logo" />
+      <div className={style.footerLogo}>
+        <img src={Logo} alt="Logo" style={{ width: "3rem" }} />
+        <h3>Visual Side</h3>
       </div>
     </footer>
   );
