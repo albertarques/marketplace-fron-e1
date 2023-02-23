@@ -6,9 +6,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+
 export default function MediaCard(title, description, picture) {
   return (
-    <>
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
@@ -31,6 +31,5 @@ export default function MediaCard(title, description, picture) {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    </>
   );
 }
