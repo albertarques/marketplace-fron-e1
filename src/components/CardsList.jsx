@@ -11,7 +11,9 @@ import { Container } from "@mui/system";
 
 import {DataContext} from '../context/DataContext'
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box/Box';
+import JobCard from './interface/cards/Cards'
+
+import {Box} from '@mui/system';
 
 function CardsList() {
 
@@ -19,33 +21,33 @@ function CardsList() {
 
   if(data){
     return (
-      <Box mt={3} m={8}>
-        <Grid container spacing={4}>
-          {console.log(data.jobs)}
-          {data.jobs.map((job) => (
-            <Card grid key={job.id} sx={{ maxWidth: 345 }}>
-              <CardMedia
-                sx={{ height: 140 }}
-                image="https://picsum.photos/200/300"
-                title={job.title}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {job.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {job.description}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Link to={`/job/${job.id}`}>
-                  <Button size="small">Ver detalle</Button>
-                </Link>
-              </CardActions>
-            </Card>
-          ))}
-        </Grid>
-      </Box>
+          <Box sx={{ margin:4, display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <Grid container spacing={4}>
+              {console.log(data.jobs)}
+              {data.jobs.map((job) => (
+                <Card grid key={job.id} sx={{ maxWidth: 345, margin:2 }}>
+                  <CardMedia
+                    sx={{ height: 140 }}
+                    image="https://picsum.photos/200/300"
+                    title={job.title}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {job.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {job.description}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to={`/job/${job.id}`}>
+                      <Button size="small">Ver detalle</Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              ))}
+            </Grid>
+          </Box>
     )
   } else {
     return (    
